@@ -15,6 +15,72 @@ entry = Entry(root, width=19, font='Arial 20', bd=0)
 entry.grid(row=0, column=0, columnspan=4)
 
 
+# button logic
+def num(number):
+    current = entry.get()
+    entry.delete(0, END)
+    entry.insert(0, str(current) + str(number))
+
+def clear():
+    entry.delete(0, END)
+
+def divide():
+    global first_num
+    global method
+    first_num = entry.get()
+    method = "division"
+    entry.delete(0, END)
+
+def multiply():
+    global first_num
+    global method
+    first_num = entry.get()
+    method = "multiplication"
+    entry.delete(0, END)
+
+def subtract():
+    global first_num
+    global method
+    first_num = entry.get()
+    method = "subtraction"
+    entry.delete(0, END)
+
+def add():
+    global first_num
+    global method
+    first_num = entry.get()
+    method = "addition"
+    entry.delete(0, END)
+
+def equals():
+    second_num = entry.get()
+    entry.delete(0, END)
+
+    if "." in first_num or "." in second_num:
+        if method == "division":
+            entry.insert(0, float(first_num) / float(second_num))
+        elif method == "multiplication":
+            entry.insert(0, float(first_num) * float(second_num))
+        elif method == "subtraction":
+            entry.insert(0, float(first_num) - float(second_num))
+        elif method == "addition":
+            entry.insert(0, float(first_num) + float(second_num))
+        else:
+            entry.insert(0, "Something went wrong.")
+    elif not "." in first_num and not "." in second_num:
+        if method == "division":
+            entry.insert(0, int(first_num) / int(second_num))
+        elif method == "multiplication":
+            entry.insert(0, int(first_num) * int(second_num))
+        elif method == "subtraction":
+            entry.insert(0, int(first_num) - int(second_num))
+        elif method == "addition":
+            entry.insert(0, int(first_num) + int(second_num))
+        else:
+            entry.insert(0, "Something went wrong.")
+    else:
+        entry.insert(0, "Something went wrong.")
+
 # define buttons
 button_1 = Button(root, text="1", padx=30, pady=20, bd=1, command=lambda: num(1))
 button_2 = Button(root, text="2", padx=30, pady=20, bd=1, command=lambda: num(2))
