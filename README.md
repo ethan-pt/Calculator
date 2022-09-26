@@ -1,22 +1,39 @@
 # Simple Calculator
 
-Just a simple calculator built with Python and Tkinter
-
+A simple calculator built with Python and Tkinter
 
 ## Table of contents
 
-* [General Info](#general-info)
-* [Technologies](#technologies)
+* [General Info](#general-information)
+* [Technologies Used](#technologies-used)
+* [Screenshots](#screenshots)
+* [Setup](#setup)
+* [Project Status](#project-status)
+* [Contact](#contact)
 
+## General Information
 
-## General info
+A simple calculator built with Python and Tkinter, just does simple arithmetic :)
 
-Just a simple calculator built with Python and Tkinter, just does simple arithmetic :)
-
-
-## Technologies
-
-Built with:
+## Technologies Used
 
 * Python 3.10.0
 * Tkinter
+
+## Screenshots
+
+![screenshot](./img/screenshot.png)
+
+## Setup
+
+`pip install tk`
+
+## Project Status
+
+Project is: _finished_
+
+## Contact
+
+[Check out my GitHub](https://github.com/Assentt)
+
+[Send me an Email](mailto:tubbeethan@gmail.com)
